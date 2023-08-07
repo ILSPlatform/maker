@@ -2,6 +2,7 @@
   "name": "oro/maker",
   "description": "Code generation/makers for Oro platform",
   "license": "OSL-3.0",
+  "version": "1.3",
   "authors": [
     {
       "name": "Oro, Inc",
@@ -23,5 +24,8 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "alias": "dev-master"
+  }
 }
