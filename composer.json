@@ -7,6 +7,10 @@
     {
       "name": "Oro, Inc",
       "homepage": "https://www.orocommerce.com"
+    },
+    {
+      "name": "CAMP ILS",
+      "homepage": "https://www.ilsmart.com"
     }
   ],
   "autoload": {
