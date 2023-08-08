@@ -1,0 +1,22 @@
+generate:
+  options:
+    organization: ils
+    package: external_assets
+  entities:
+    external_digital_asset:
+      label: 'External Digital Asset'
+      configuration:
+        owner: organization
+      fields:
+        product:
+          type: relation
+          relation_type: many-to-one
+          relation_target: 'Oro\Bundle\ProductBundle\Entity\Product'
+        file_name:
+          type: string
+        cloud_key:
+          type: string
+        title:
+          type: string
+        description:
+          type: text
