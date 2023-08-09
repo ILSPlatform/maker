@@ -149,7 +149,7 @@ class DoctrineEntityGenerator implements GeneratorInterface
                     'entity_class_name' => $shortEntityClass
                 ]
             );
-            $repositories[] = $repoClassDetails->getFullName();
+            $repositories[] = [ 'repofullname' => $repoClassDetails->getFullName(), 'entityfqcn' => $entityFQCN ];
         }
 
         foreach ($configData['entities'] as $entityName => &$entityConfig) {
