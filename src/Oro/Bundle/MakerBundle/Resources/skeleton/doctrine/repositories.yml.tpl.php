@@ -5,6 +5,6 @@ services:
         parent: oro_entity.abstract_repository
         arguments:
             - '<?= $repository['entityfqcn']; ?>'
-        tags:
-            - { name: doctrine.repository_service }
+        #tags:
+        #    - { name: doctrine.repository_service }
 <?php endforeach; ?>

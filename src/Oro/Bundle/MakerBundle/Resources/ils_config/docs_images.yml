@@ -18,5 +18,8 @@ generate:
           type: string
         title:
           type: string
+        imagedoc_type:
+          type: string
         description:
           type: text
+        
