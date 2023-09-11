@@ -11,10 +11,14 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 class <?= $class_name . PHP_EOL ?>
 {
-    public function __construct(
-        private RequestStack $requestStack,
-        private TranslatorInterface $translator
+    private RequestStack $requestStack;
+    private TranslatorInterface $translator;
+
+    public function __construct(RequestStack $requestStack,
+        TranslatorInterface $translator
     ) {
+        $this->requestStack = $requestStack;
+        $this->translator = $translator;
     }
 
     public function onView(BeforeListRenderEvent $event)
