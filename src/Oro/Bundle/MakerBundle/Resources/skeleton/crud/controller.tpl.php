@@ -80,7 +80,7 @@ class <?= $class_name; ?> extends AbstractController
      *      permission="CREATE"
      * )
      */
-    public function createAction(Request $request): array|RedirectResponse
+    public function createAction(Request $request): mixed
     {
         $createMessage = $this->get(TranslatorInterface::class)->trans(
             '<?= $saved_message ?>'
@@ -101,7 +101,7 @@ class <?= $class_name; ?> extends AbstractController
      *      permission="EDIT"
      * )
      */
-    public function updateAction(<?= $short_class_name ?> $entity, Request $request): array|RedirectResponse
+    public function updateAction(<?= $short_class_name ?> $entity, Request $request): mixed
     {
         $updateMessage = $this->get(TranslatorInterface::class)->trans(
             '<?= $saved_message ?>'
@@ -114,7 +114,7 @@ class <?= $class_name; ?> extends AbstractController
         <?= $short_class_name ?> $entity,
         Request $request,
         string $message = ''
-    ): array|RedirectResponse {
+    ): mixed {
         return $this->get(UpdateHandlerFacade::class)->update(
             $entity,
             $this->createForm(<?= $form_type ?>::class, $entity),
