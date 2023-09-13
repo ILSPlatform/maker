@@ -41,7 +41,7 @@ class <?= $class_name . PHP_EOL ?>
 
     private function add<?= \Symfony\Bundle\MakerBundle\Str::asCamelCase(str_replace('-', '_', $section['grid_name'])); ?>(
         BeforeListRenderEvent $event,
-        mixed $id
+        $id
     ): void {
         $template = $event->getEnvironment()->render(
             '<?= $template_path_prefix ?>includes/relationGrid.html.twig',
